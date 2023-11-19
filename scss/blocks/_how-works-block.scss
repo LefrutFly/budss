@@ -1,0 +1,125 @@
+@import '../vars';
+
+.how-works {
+	height: 636px;
+	margin-bottom: 100px;
+
+	&__phone {
+		position: relative;
+		top: -636px;
+		width: 100%;
+		height: 100%;
+		background: url('../../img/how-works-phone.png') center no-repeat;
+	}
+
+	.hw-container {
+		height: 636px;
+		z-index: -10;
+		@include T1_Bold_128;
+		width: 100%;
+		overflow: hidden;
+		padding-top: 40px;
+
+		&__item {
+			display: flex;
+			margin-bottom: 68px;
+			animation: marquee 24s linear infinite;
+		}
+		&__item_inverted {
+			display: flex;
+			margin-bottom: 68px;
+			animation: marqueeInverted 24s linear infinite;
+		}
+
+		h1 {
+			white-space: nowrap;
+			width: 1015px;
+			margin-right: 23px;
+		}
+
+		.green {
+			color: $colorSecondary01;
+		}
+
+		.purple {
+			color: $colorPrimary02;
+		}
+
+		.orange {
+			color: $colorSecondary02;
+		}
+
+		.glass {
+			color: $colorGrayscale01;
+			text-shadow: 1px 0 0 $colorGrayscale02, -1px 0 0 $colorGrayscale02,
+				0 1px 0 $colorGrayscale02, 0 -1px 0 $colorGrayscale02;
+		}
+	}
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(-4060px);
+	}
+}
+
+@keyframes marqueeInverted {
+	0% {
+		transform: translateX(-4060px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+@media (max-width: 540px) {
+	.how-works {
+		height: 540px;
+		margin-bottom: 40px;
+
+		&__phone {
+			top: -540px;
+			background: url('../../img/how-works-phone.png') center/228px 461px
+				no-repeat;
+		}
+
+		.hw-container {
+			height: 540px;
+			@include T4_Bold_48;
+			padding-top: 101px;
+
+			&__item {
+				margin-bottom: 93px;
+			}
+			&__item_inverted {
+				margin-bottom: 93px;
+			}
+
+			h1 {
+				width: 388px;
+				margin-right: 20px;
+			}
+		}
+	}
+
+	@keyframes marquee {
+		0% {
+			transform: translateX(0px);
+		}
+		100% {
+			transform: translateX(-1632px);
+		}
+	}
+
+	@keyframes marqueeInverted {
+		0% {
+			transform: translateX(-1632px);
+		}
+		100% {
+			transform: translateX(0px);
+		}
+	}
+}

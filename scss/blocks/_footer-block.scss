@@ -1,0 +1,141 @@
+@import '../vars';
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	@include general-padding-inline;
+	padding-top: 40px;
+	padding-bottom: 20px;
+
+	&__top-block {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__logo {
+		margin-right: toAdaptivePx(120);
+	}
+
+	&__for-business {
+		margin-right: toAdaptivePx(40);
+	}
+
+	&__top-links {
+		@include S5_Medium_20;
+		text-align: center;
+		color: $colorGrayscale07;
+		white-space: nowrap;
+	}
+
+	&__mobile-visible-only {
+		display: none;
+	}
+
+	.button_contact-sales {
+		margin-left: toAdaptivePx(120);
+		margin-right: toAdaptivePx(40);
+	}
+
+	&__line {
+		margin-top: 30px;
+		margin-bottom: 20px;
+		width: 100%;
+		border-top: 2px solid $colorGrayscale02;
+	}
+
+	&__buttons-block {
+		display: flex;
+		flex-direction: row;
+
+		.button-app-store {
+			margin-right: toAdaptivePx(20);
+			height: 57px;
+			width: 194px;
+			background: url('../../img/appstore.png') center no-repeat;
+		}
+
+		.button-google-play {
+			height: 57px;
+			width: 196px;
+			background: url('../../img/googleplay.png') center no-repeat;
+		}
+	}
+
+	&__bottom-block {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.copyright {
+		@include B5_Light_14;
+		color: $colorGrayscale03;
+	}
+
+	&__bottom-links {
+		display: flex;
+		flex-direction: row;
+		gap: toAdaptivePx(20);
+	}
+
+	&__desktop-visible-only {
+		@include B6_Light_14_Underline;
+		text-align: right;
+		color: $colorGrayscale03;
+	}
+}
+
+@media (max-width: 740px) {
+	.footer {
+		flex-direction: column;
+		padding-top: 20px;
+
+		&__top-block {
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
+		}
+
+		&__logo {
+			margin-right: 0;
+			margin-bottom: 40px;
+		}
+
+		&__for-business {
+			margin-right: toAdaptivePx(40);
+		}
+
+		&__top-links {
+			margin-bottom: 16px;
+		}
+
+		&__mobile-visible-only {
+			display: block;
+		}
+
+		.button_contact-sales {
+			margin: 24px 0 40px;
+		}
+
+		&__buttons-block {
+			flex-direction: column;
+
+			.button-app-store {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+
+			.button-google-play {
+				margin-bottom: 10px;
+			}
+		}
+
+		&__desktop-visible-only {
+			display: none;
+		}
+	}
+}

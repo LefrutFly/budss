@@ -1,0 +1,263 @@
+@import '../vars';
+
+.awareness {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-color: $colorGrayscale06;
+
+	&__padding-first {
+		@include general-padding-inline;
+	}
+	&__padding-second {
+		padding-inline: toAdaptivePx(51);
+	}
+
+	.loader {
+		display: flex;
+		padding: 60px 0px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 40px;
+		border-radius: 60px;
+		border: 1px solid $colorGrayscale04;
+		margin-bottom: 100px;
+
+		&__title {
+			@include T3_Bold_64;
+		}
+
+		.button_contact-sales {
+		}
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 100px;
+	}
+
+	&__item {
+	}
+
+	.info-text {
+		&__title {
+			width: toAdaptivePx(832);
+			@include T2_Bold_96;
+			margin-bottom: 20px;
+		}
+
+		&__text {
+			width: toAdaptivePx(537);
+			@include S6_Regular_20;
+		}
+	}
+
+	.links-social {
+		display: flex;
+		flex-direction: row;
+		height: 270px;
+		padding-top: 45px;
+		padding-bottom: 45px;
+
+		&__link {
+			height: 100%;
+			width: max(toAdaptivePx(90), 64px);
+			height: max(toAdaptivePx(90), 64px);
+			border-radius: 50%;
+			background-color: $colorPrimary01;
+			cursor: pointer;
+		}
+
+		.facebook {
+			align-self: flex-start;
+			margin-left: toAdaptivePx(33);
+			margin-right: toAdaptivePx(40);
+			background-image: url('../../img/logos/facebook.svg');
+			background-repeat: no-repeat;
+			background-position: center 110%;
+			background-size: max(toAdaptivePx(72), 51px) max(toAdaptivePx(72), 51px);
+		}
+
+		.twitter {
+			align-self: flex-end;
+			margin-right: toAdaptivePx(40);
+			background-image: url('../../img/logos/twitter.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: max(toAdaptivePx(45), 32px) max(toAdaptivePx(45), 32px);
+		}
+
+		.instagram {
+			align-self: flex-start;
+			margin-right: toAdaptivePx(40);
+			background-image: url('../../img/logos/instagram.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: max(toAdaptivePx(45), 32px) max(toAdaptivePx(45), 32px);
+		}
+
+		.tiktok {
+			align-self: flex-end;
+			background-image: url('../../img/logos/tiktok.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: max(toAdaptivePx(45), 32px) max(toAdaptivePx(45), 32px);
+		}
+	}
+
+	.line-logos {
+		display: flex;
+		gap: toAdaptivePx(90);
+		justify-content: space-between;
+
+		.woo-commerce {
+			height: min(max(toAdaptivePx(60), 43px), 60px);
+			width: min(max(toAdaptivePx(126), 91px), 126px);
+			background-image: url('../../img/logos/woo.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: min(max(toAdaptivePx(116), 91px), 116px)
+				min(max(toAdaptivePx(60), 43px), 60px);
+		}
+
+		.shopify {
+			height: min(max(toAdaptivePx(60), 43px), 60px);
+			width: min(max(toAdaptivePx(196), 149px), 196px);
+			background-image: url('../../img/logos/shopify.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: min(max(toAdaptivePx(196), 149px), 196px)
+				min(max(toAdaptivePx(60), 43px), 60px);
+		}
+
+		.square {
+			height: min(max(toAdaptivePx(60), 43px), 60px);
+			width: min(max(toAdaptivePx(192), 131px), 192px);
+			background-image: url('../../img/logos/square.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: min(max(toAdaptivePx(182), 131px), 182px)
+				min(max(toAdaptivePx(60), 43px), 60px);
+		}
+
+		.squarespace {
+			height: min(max(toAdaptivePx(60), 43px), 60px);
+			width: min(max(toAdaptivePx(277), 196px), 277px);
+			background-image: url('../../img/logos/squarespace.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: min(max(toAdaptivePx(264), 196px), 264px)
+				min(max(toAdaptivePx(60), 43px), 60px);
+		}
+
+		.clover {
+			height: min(max(toAdaptivePx(60), 43px), 60px);
+			width: min(max(toAdaptivePx(184), 128px), 184px);
+			background-image: url('../../img/logos/clover.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: min(max(toAdaptivePx(174), 128px), 174px)
+				min(max(toAdaptivePx(60), 43px), 60px);
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.awareness {
+		.info-text {
+			&__title {
+				width: toAdaptivePx(600);
+			}
+		}
+		.line-logos {
+			flex-wrap: wrap;
+			align-content: flex-start;
+		}
+	}
+}
+
+@media (max-width: 540px) {
+	.awareness {
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+		&__padding-second {
+			padding: 40px 20px;
+		}
+
+		.loader {
+			display: flex;
+			padding: 40px 0px;
+			margin-bottom: 40px;
+
+			&__title {
+				margin-inline: 20px;
+				text-align: center;
+			}
+		}
+
+		&__container {
+			flex-direction: column;
+			margin-bottom: 40px;
+		}
+
+		.info-text {
+			&__title {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+
+			&__text {
+				width: 100%;
+			}
+		}
+
+		.links-social {
+			height: 189px;
+			padding-top: 20px;
+			padding-bottom: 40px;
+
+			.facebook {
+				margin-left: 0;
+				margin-right: 28px;
+			}
+
+			.twitter {
+				margin-right: 28px;
+			}
+
+			.instagram {
+				margin-right: 28px;
+			}
+
+			.tiktok {
+				margin-right: 0px;
+			}
+		}
+
+		.line-logos {
+			gap: 30px 40px;
+
+			.woo-commerce {
+				order: 3;
+			}
+
+			.shopify {
+				order: 2;
+			}
+
+			.square {
+				order: 1;
+			}
+
+			.squarespace {
+				order: 4;
+			}
+
+			.clover {
+				order: 5;
+			}
+		}
+	}
+}

@@ -1,0 +1,72 @@
+@import '../vars';
+
+.hero {
+	display: flex;
+	height: calc(100hv - 71px - 38px);
+	background: url(../../img/hero-woman.png) 100% 100% no-repeat;
+	margin-bottom: 100px;
+
+	&__woman {
+		display: none;
+	}
+}
+
+.contact-sales-block {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+	margin-top: 82px;
+	margin-bottom: 140px;
+	margin-left: 7.6%;
+	color: $colorGrayscale07;
+
+	&__title {
+		@include T2_Bold_96;
+		margin-bottom: 20px;
+		white-space: nowrap;
+
+		span {
+			margin-left: 1px;
+		}
+	}
+	&__text {
+		width: min(0.3798 * 100vw, 547px);
+		height: auto;
+		// @include S6_Regular_20;
+		font-family: 'Outfit';
+		margin-bottom: 40px;
+	}
+}
+
+@media (max-width: 540px) {
+	.hero {
+		flex-direction: column;
+		height: auto;
+		background: none;
+		margin-bottom: 22px;
+
+		&__woman {
+			display: block;
+			width: 100vw;
+			height: 272px;
+			background: url(../../img/hero-woman.png) 100% 0 / auto 100% no-repeat;
+		}
+	}
+
+	.contact-sales-block {
+		margin-top: 51px;
+		margin-bottom: 140px;
+		margin-inline: 16px;
+
+		&__text {
+			@include B2_Regular_16;
+			width: 100%;
+			height: auto;
+		}
+
+		&__button {
+			width: 100%;
+		}
+	}
+}

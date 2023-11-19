@@ -1,0 +1,180 @@
+@import '../vars';
+
+.about {
+	@include general-padding-inline;
+	color: $colorGrayscale07;
+	min-height: 953px;
+	background: url('../../img/about-bg.svg') 0 107%/283px 413px no-repeat;
+	margin-bottom: 100px;
+
+	&__title {
+		@include T2_Bold_96;
+		margin-bottom: 80px;
+	}
+
+	.content-box {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		&__left-block {
+			margin-right: calc(0.091 * 100vw);
+		}
+
+		&__text {
+			width: calc(0.275 * 100vw);
+			@include S1_SemiBold_36;
+
+			span {
+				position: relative;
+				white-space: nowrap;
+			}
+
+			span::before {
+				content: '';
+				position: absolute;
+				background-color: $colorPrimary02;
+				transform: skewY(-1.693deg);
+				border-radius: 30px;
+				width: min(max(toAdaptivePx(386), 235px), 386px);
+				height: min(max(toAdaptivePx(34), 29px), 34px);
+				top: 10px;
+				left: -5px;
+				z-index: -1;
+			}
+		}
+
+		&__right-block {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.rb {
+			&__item {
+			}
+			&__title {
+				@include T4_Bold_48;
+				margin-top: 10px;
+				margin-bottom: 20px;
+			}
+			&__text {
+				@include S3_Regular_24;
+			}
+		}
+	}
+}
+.contactless {
+	height: calc(0.1861 * 100vw);
+	width: calc(0.2229 * 100vw);
+	margin: 0px calc(0.0486 * 100vw) calc(0.0486 * 100vw) 0px;
+
+	&__img {
+		height: 100px;
+		width: 100px;
+
+		background: url('../../img/about-star.svg') center no-repeat;
+	}
+}
+.increased {
+	height: calc(0.2014 * 100vw);
+	width: calc(0.2174 * 100vw);
+	margin: 0px 0px calc(0.0486 * 100vw) 0px;
+
+	&__img {
+		height: 100px;
+		width: 100px;
+
+		background: url('../../img/about-arrow.svg') center no-repeat;
+	}
+}
+.analytics {
+	height: calc(0.2215 * 100vw);
+	width: calc(0.2125 * 100vw);
+	margin: 0px calc(0.0486 * 100vw) calc(0.0486 * 100vw) 0px;
+
+	&__img {
+		height: 100px;
+		width: 100px;
+
+		background: url('../../img/about-analytics.svg') center no-repeat;
+	}
+}
+
+.fraud {
+	height: calc(0.2618 * 100vw);
+	width: calc(0.2333 * 100vw);
+
+	&__img {
+		height: 100px;
+		width: 100px;
+
+		background: url('../../img/about-chain.svg') center no-repeat;
+	}
+}
+
+@media (max-width: 1024px) {
+	.contactless {
+		height: auto;
+		width: 100%;
+		margin: 0px;
+	}
+	.increased {
+		height: auto;
+		width: 100%;
+		margin: 0px;
+	}
+	.analytics {
+		height: auto;
+		width: 100%;
+		margin: 0px;
+	}
+
+	.fraud {
+		height: auto;
+		width: 100%;
+		margin: 0px;
+	}
+}
+
+@media (max-width: 540px) {
+	.about {
+		background: none;
+
+		&__title {
+			margin-bottom: 30px;
+		}
+
+		.content-box {
+			flex-direction: column;
+			justify-content: none;
+
+			&__left-block {
+				margin-right: 0;
+			}
+
+			&__text {
+				width: 80%;
+				margin-bottom: 40px;
+			}
+
+			&__right-block {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.rb {
+				&__item {
+					margin-bottom: 60px;
+				}
+				&__title {
+					@include T7_Bold_32;
+					margin-bottom: 16px;
+					height: auto;
+				}
+				&__text {
+					@include B2_Regular_16;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+@import '../vars';
+
+.thank-you {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 417px;
+	padding: 40px;
+	background-color: $colorGrayscale07;
+	border-radius: 20px;
+	z-index: 110;
+
+	&__close {
+		position: fixed;
+		top: 16px;
+		right: 16px;
+		height: 26px;
+		width: 26px;
+		background: url('../../img/close-button-cookies.svg');
+	}
+
+	&__img {
+		height: 232px;
+		width: 297px;
+		margin-top: 24px;
+		margin-inline: auto;
+		background-image: url('../../img/thankuman.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&__title {
+		@include S1_SemiBold_36;
+		color: $colorPrimary02;
+		text-align: center;
+	}
+
+	&__text {
+		@include S3_Regular_24;
+		color: $colorGrayscale00;
+		text-align: center;
+	}
+}
+
+@media (max-width: 440px) {
+	.thank-you {
+		width: 335px;
+		padding: 40px 20px;
+	}
+}

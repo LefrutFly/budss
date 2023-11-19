@@ -1,0 +1,76 @@
+@import '../vars';
+
+.cookies {
+	display: flex;
+	flex-direction: row;
+	width: min(toAdaptivePx(1285), 1285px);
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	padding: 30px;
+	margin-bottom: 30px;
+	background-color: $colorGrayscale07;
+	border-radius: 16px;
+	z-index: 120;
+
+	&__close {
+		position: fixed;
+		top: 16px;
+		right: 16px;
+		height: 26px;
+		width: 26px;
+		background: url('../../img/close-button-cookies.svg');
+	}
+
+	&__text {
+		width: min(toAdaptivePx(783), 783px);
+		@include S7_Light_20;
+		color: #383838;
+		margin-right: min(toAdaptivePx(140), 140px);
+	}
+
+	&__accept {
+		height: 57px;
+		width: 124px;
+		margin-right: min(toAdaptivePx(20), 20px);
+	}
+
+	&__decline {
+		height: 57px;
+		width: 128px;
+		color: $colorGrayscale00;
+		background-color: $colorGrayscale07;
+		border: 2px solid $colorPrimary02;
+		border-radius: 16px;
+	}
+}
+
+@media (max-width: 640px) {
+	.cookies {
+		display: flex;
+		flex-direction: column;
+		width: 86%;
+		padding: 30px;
+		margin-bottom: 20px;
+
+		&__close {
+		}
+
+		&__text {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 40px;
+		}
+
+		&__accept {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+
+		&__decline {
+			width: 100%;
+		}
+	}
+}

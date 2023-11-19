@@ -1,0 +1,106 @@
+@import '../vars';
+
+.nav {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	@include general-padding-inline;
+	background-color: $colorSecondary02;
+	height: 38px;
+
+	&__a_active {
+		@include B1_Medium_16;
+		padding: 9px 40px;
+		background-color: $colorGrayscale01;
+		color: $colorGrayscale07;
+		border-radius: 20px 20px 0 0;
+	}
+	&__a_inactive {
+		@include B1_Medium_16;
+		padding: 9px 40px;
+		color: $colorGrayscale00;
+	}
+}
+
+.header {
+	position: relative;
+	top: 0;
+	z-index: 100;
+	background-color: $colorGrayscale01;
+	@include general-padding-inline;
+	&__super-header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: 71px;
+	}
+
+	&__button {
+	}
+
+	&__nav-button {
+		display: none;
+	}
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.logo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	&__bg {
+		height: 52px;
+		width: 50px;
+		background: url(../../../img/logo.svg) 50%/33px 36px no-repeat;
+	}
+	&__title {
+		color: $colorGrayscale07;
+		text-align: center;
+		font-size: 37px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 17px;
+		text-transform: lowercase;
+	}
+}
+
+@media (max-width: 540px) {
+	.nav {
+		padding: 0;
+	}
+
+	.header {
+		@include general-padding-inline;
+		&__button {
+			display: none;
+		}
+		&__nav-button {
+			display: block;
+			height: 40px;
+			width: 40px;
+			background: url('../../img/nav-menu-button.svg');
+		}
+	}
+
+	.logo {
+		&__bg {
+			height: 41px;
+			width: 40px;
+			background: url(../../../img/logo.svg) 50%/20px 23px no-repeat;
+		}
+		&__title {
+			font-style: normal;
+			font-weight: 600;
+			text-transform: lowercase;
+			font-size: 29.6px;
+			line-height: 13.6px;
+		}
+	}
+}

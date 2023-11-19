@@ -1,0 +1,180 @@
+@function toAdaptivePx($value) {
+	@return calc(#{$value} / 1440 * 100vw);
+}
+
+//Color
+$colorGrayscale00: #000000;
+$colorGrayscale01: #181818;
+$colorGrayscale02: #444444;
+$colorGrayscale03: #b9b9b9;
+$colorGrayscale04: #cfcfcf;
+$colorGrayscale05: #e4e4e4;
+$colorGrayscale06: #f5f5f5;
+$colorGrayscale07: #ffffff;
+$colorGrayscale20: #f1f1f1;
+$colorGrayscale30: #a7a7a7;
+
+$colorPrimary00: #7b31d4;
+$colorPrimary01: #954ced;
+$colorPrimary02: #a64ced;
+$colorPrimary03: #ba8bf3;
+$colorPrimary04: #954ced33;
+
+$colorSecondary01: #2fdbbc;
+$colorSecondary02: #ffaa4c;
+$colorSecondary03: #c1db2f;
+
+$colorAdditional01: #ff6c2d;
+$colorAdditional02: #ec1211;
+
+//Title
+@mixin T1_Bold_128 {
+	letter-spacing: 1px;
+	font-size: 128px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 106%;
+}
+@mixin T2_Bold_96 {
+	letter-spacing: 1px;
+	font-size: min(max(toAdaptivePx(96), 40px), 96px);
+	font-style: normal;
+	font-weight: 700;
+	line-height: 106%;
+}
+@mixin T3_Bold_64 {
+	letter-spacing: 1px;
+	font-size: min(max(toAdaptivePx(64), 40px), 64px);
+	font-style: normal;
+	font-weight: 700;
+	line-height: 106%;
+}
+@mixin T4_Bold_48 {
+	letter-spacing: 1px;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 106%;
+}
+@mixin T5_SemiBold_48 {
+	letter-spacing: 1px;
+	font-size: max(min(toAdaptivePx(48), 48px), 32px);
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+@mixin T6_Bold_40 {
+	letter-spacing: 1px;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 106%;
+}
+@mixin T7_Bold_32 {
+	letter-spacing: 1px;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 106%;
+}
+
+//Subtitle
+@mixin S1_SemiBold_36 {
+	font-size: min(max(toAdaptivePx(36), 24px), 36px);
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+@mixin S2_SemiBold_24 {
+	font-size: min(max(toAdaptivePx(24), 20px), 24px);
+	font-style: normal;
+	font-weight: 600;
+	line-height: 120%;
+}
+@mixin S3_Regular_24 {
+	font-size: min(max(toAdaptivePx(24), 20px), 24px);
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+}
+@mixin S4_SemiBold_20 {
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+@mixin S5_Medium_20 {
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+@mixin S6_Regular_20 {
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+}
+@mixin S7_Light_20 {
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 140%;
+}
+
+//Body
+@mixin B1_Medium_16 {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+@mixin B2_Regular_16 {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+@mixin B3_Medium_14 {
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 22px;
+}
+@mixin B4_Regular_14 {
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 22px;
+}
+@mixin B5_Light_14 {
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 140%;
+}
+@mixin B6_Light_14_Underline {
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 140%;
+	text-decoration-line: underline;
+}
+@mixin B6_Light_24_Underline {
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 140%;
+	text-decoration-line: underline;
+}
+@mixin B7_Regular_12 {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+//Other
+@mixin general-padding-inline {
+	padding-inline: toAdaptivePx(60);
+}

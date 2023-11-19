@@ -1,0 +1,99 @@
+@import './vars';
+
+body {
+	min-width: 375px;
+	min-height: 100vh;
+	position: relative;
+	overflow-x: hidden;
+	background-color: $colorGrayscale01;
+}
+
+img,
+svg {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+}
+
+.hidden {
+	display: none;
+}
+
+.button-contact-sales {
+	height: 57px;
+	width: 182px;
+	padding: 16px 30px;
+	color: $colorGrayscale07;
+	@include S4_SemiBold_20;
+	background-color: $colorPrimary01;
+	border-radius: 16px;
+	white-space: nowrap;
+
+	&:hover {
+		border: 2px solid $colorPrimary01;
+		padding: 14px 28px;
+		background-color: $colorGrayscale01;
+		color: $colorGrayscale07;
+	}
+
+	&:focus {
+		border: 2px solid $colorPrimary03;
+		padding: 14px 28px;
+		background-color: $colorPrimary01;
+	}
+
+	&:active {
+		border: none;
+		background-color: $colorPrimary00;
+	}
+
+	&_white-bg {
+		height: 57px;
+		width: 182px;
+		padding: 16px 30px;
+		color: $colorGrayscale07;
+		@include S4_SemiBold_20;
+		background-color: $colorPrimary01;
+		border-radius: 16px;
+		white-space: nowrap;
+
+		&:hover {
+			padding: 14px 28px;
+			background-color: $colorGrayscale01;
+			color: $colorGrayscale07;
+		}
+
+		&:focus {
+			border: 2px solid $colorPrimary03;
+			padding: 14px 28px;
+			background-color: $colorPrimary01;
+		}
+
+		&:active {
+			border: none;
+			background-color: $colorPrimary00;
+		}
+	}
+
+	&_disabled {
+		height: 57px;
+		width: 182px;
+		padding: 16px 30px;
+		color: $colorGrayscale07;
+		@include S4_SemiBold_20;
+		border-radius: 16px;
+		white-space: nowrap;
+		background-color: $colorGrayscale03;
+		cursor: not-allowed;
+	}
+
+	@keyframes loaderAnimation {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+}

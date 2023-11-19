@@ -1,0 +1,240 @@
+@import '../_vars.scss';
+
+.why-budss {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 100px;
+
+	&__title {
+		max-width: 664px;
+		margin-inline: auto;
+		color: $colorGrayscale07;
+		@include T3_Bold_64;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		max-width: 664px;
+		margin-inline: auto;
+		text-align: center;
+		color: $colorGrayscale07;
+		@include S1_SemiBold_36;
+		margin-bottom: 70px;
+
+		span {
+			position: relative;
+			white-space: nowrap;
+		}
+
+		span::before {
+			content: '';
+			position: absolute;
+			background-color: $colorPrimary02;
+			transform: skewY(-1.693deg);
+			border-radius: 30px;
+			width: min(max(toAdaptivePx(386), 235px), 386px);
+			height: min(max(toAdaptivePx(34), 29px), 34px);
+			top: 10px;
+			left: -12px;
+			z-index: -1;
+		}
+	}
+
+	.why-content-box {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+		@include general-padding-inline;
+		margin-bottom: 20px;
+
+		&__item {
+			border-radius: 30px;
+			background-color: $colorGrayscale06;
+			color: $colorGrayscale00;
+
+			.title {
+				@include T5_SemiBold_48;
+			}
+			.text {
+				@include S6_Regular_20;
+			}
+		}
+
+		&__item-1 {
+			height: auto;
+			width: toAdaptivePx(733);
+
+			background: $colorGrayscale06 url('../../img/why-1block-bg.png') left
+				bottom/auto 100% no-repeat;
+
+			padding: toAdaptivePx(39) toAdaptivePx(40) toAdaptivePx(50)
+				toAdaptivePx(329);
+
+			.title {
+				width: toAdaptivePx(369);
+				margin-bottom: 20px;
+			}
+
+			.text {
+				width: toAdaptivePx(334);
+			}
+		}
+
+		&__item-2 {
+			height: auto;
+			width: toAdaptivePx(547);
+
+			background-color: $colorGrayscale06;
+			background-image: url('../../img/why-2block-bg-right.svg'),
+				url('../../img/why-2block-bg-center.svg'),
+				url('../../img/why-2block-bg-left.svg');
+			background-repeat: no-repeat, no-repeat, no-repeat;
+			background-position: 105% center, 90% 110%, 10% 110%;
+			background-size: auto toAdaptivePx(167), auto toAdaptivePx(124),
+				auto toAdaptivePx(89);
+
+			padding: toAdaptivePx(40) toAdaptivePx(91) toAdaptivePx(86)
+				toAdaptivePx(40);
+
+			.title {
+				width: toAdaptivePx(425);
+				margin-bottom: 20px;
+			}
+
+			.text {
+				width: toAdaptivePx(416);
+			}
+		}
+
+		&__item-3 {
+			height: auto;
+			width: toAdaptivePx(547);
+
+			background-color: $colorGrayscale06;
+			background-image: url('../../img/why-3block-bg.svg');
+			background-repeat: no-repeat;
+			background-position: right bottom;
+			background-size: toAdaptivePx(202) auto;
+
+			padding: toAdaptivePx(40) toAdaptivePx(67) toAdaptivePx(50)
+				toAdaptivePx(40);
+
+			.title {
+				width: toAdaptivePx(459);
+				margin-bottom: 20px;
+			}
+
+			.text {
+				width: toAdaptivePx(308);
+			}
+		}
+
+		&__item-4 {
+			height: auto;
+			width: toAdaptivePx(733);
+
+			background-color: $colorGrayscale06;
+			background-image: url('../../img/why-4block-bg.svg');
+			background-repeat: no-repeat;
+			background-position: 90% bottom;
+			background-size: toAdaptivePx(210) auto;
+
+			padding: toAdaptivePx(40) toAdaptivePx(291) toAdaptivePx(86)
+				toAdaptivePx(40);
+
+			.title {
+				width: toAdaptivePx(402);
+				margin-bottom: 20px;
+			}
+
+			.text {
+				width: toAdaptivePx(402);
+			}
+		}
+	}
+}
+
+@media (max-width: 630px) {
+	.why-budss {
+		margin-bottom: 40px;
+
+		.why-content-box {
+			flex-direction: column;
+
+			&__item-1 {
+				width: 100%;
+				padding: 20px 18px 197px 20px;
+
+				background: $colorGrayscale06 url('../../img/why-1block-bg-mobile.png')
+					left bottom/auto 197px no-repeat;
+
+				.title {
+					width: 100%;
+				}
+
+				.text {
+					width: 100%;
+				}
+			}
+
+			&__item-2 {
+				width: 100%;
+				padding: 20px 20px 129px 20px;
+
+				background-color: $colorGrayscale06;
+				background-image: url('../../img/why-2block-bg-right.svg'),
+					url('../../img/why-2block-bg-center.svg'),
+					url('../../img/why-2block-bg-left.svg');
+				background-repeat: no-repeat, no-repeat, no-repeat;
+				background-position: 110% 90%, center 110%, 5% 107%;
+				background-size: auto 116px, 93px auto, 72px auto;
+
+				.title {
+					width: 100%;
+				}
+
+				.text {
+					width: 100%;
+				}
+			}
+
+			&__item-3 {
+				width: 100%;
+				padding: 20px 20px 115px 20px;
+
+				background-color: $colorGrayscale06;
+				background-image: url('../../img/why-3block-bg.svg');
+				background-repeat: no-repeat;
+				background-position: right bottom;
+				background-size: 202px auto;
+
+				.title {
+					width: 100%;
+				}
+
+				.text {
+					width: 100%;
+				}
+			}
+
+			&__item-4 {
+				width: 100%;
+				padding: 20px 20px 191px 20px;
+
+				background-color: $colorGrayscale06;
+				background-image: url('../../img/why-4block-bg.svg');
+				background-repeat: no-repeat;
+				background-position: 145px bottom;
+				background-size: auto 191px;
+
+				.title {
+					width: 100%;
+				}
+
+				.text {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
